@@ -72,7 +72,7 @@ const SERVICES = [
             "Book domestic flight tickets to any city across India at the best prices. We offer both online and offline booking with instant confirmation.",
           facts: {
             Service: "Flight Ticket",
-            Type: "Domestic",
+
             Coverage: "All Indian Cities",
             Booking: "Online & Offline",
           },
@@ -88,7 +88,7 @@ const SERVICES = [
             "We book international flight tickets to destinations worldwide — Gulf, Singapore, Malaysia, Thailand, Europe, Australia, and more.",
           facts: {
             Service: "Flight Ticket",
-            Type: "International",
+
             Coverage: "Worldwide",
             Booking: "Online & Offline",
           },
@@ -103,14 +103,14 @@ const SERVICES = [
             "Complete Umrah packages including flights, visa, accommodation near Haram, and guided group tours.",
           facts: {
             Service: "Pilgrimage",
-            Type: "Umrah",
+
             Includes: "Flight + Visa + Hotel",
             Season: "Year Round",
           },
         },
       },
       {
-        name: "Haji Services",
+        name: "Haj Services",
         icon: Star,
         details: {
           image: "https://source.unsplash.com/800x400/?mecca-hajj-pilgrims",
@@ -118,7 +118,7 @@ const SERVICES = [
             "Full Haji packages with all arrangements — flights, accommodation in Makkah & Madinah, visa processing, and guided support.",
           facts: {
             Service: "Pilgrimage",
-            Type: "Haji",
+
             Includes: "Flight + Visa + Hotel",
             Season: "Dhul Hijja",
           },
@@ -138,8 +138,8 @@ const SERVICES = [
             "Apply for a new PAN card or correction in existing PAN details quickly and easily through our documentation services.",
           facts: {
             Service: "Document",
-            Type: "PAN Card",
-            Processing: "7–15 Working Days",
+            Type: "PAN / Correction",
+            Processing: "15-20 Working Days",
             Authority: "Income Tax Dept.",
           },
         },
@@ -154,8 +154,8 @@ const SERVICES = [
             "New passport application and renewal services with expert guidance through the application process.",
           facts: {
             Service: "Document",
-            Type: "Passport",
-            Processing: "15–30 Days",
+            Type: "Fresh / Renewal",
+            Processing: "30-45 Working Days",
             Authority: "Passport Seva",
           },
         },
@@ -170,9 +170,9 @@ const SERVICES = [
             "Visit visa assistance for countries including UAE, Singapore, Malaysia, Thailand, and European nations.",
           facts: {
             Service: "Visa",
-            Type: "Visit Visa",
+            Type: "Tourist / Business",
             Coverage: "UAE, SG, MY, TH, EU",
-            Processing: "3–10 Days",
+            Processing: "5-7 Working Days",
           },
         },
       },
@@ -186,9 +186,9 @@ const SERVICES = [
             "Emigration clearance (ECR/ECNR) services for workers travelling to Gulf countries on work visas.",
           facts: {
             Service: "Emigration",
-            Type: "ECR/ECNR",
+
             Coverage: "Gulf Countries",
-            Processing: "2–5 Days",
+            Processing: "Depends on Working Days",
           },
         },
       },
@@ -201,9 +201,9 @@ const SERVICES = [
             "Visa stamping services for all major countries — UAE, Saudi Arabia, Qatar, Bahrain, and more.",
           facts: {
             Service: "Visa",
-            Type: "Stamping",
+            Type: "Work / Visit",
             Coverage: "Gulf & Others",
-            Processing: "3–7 Days",
+            Processing: "3-5 Working Days",
           },
         },
       },
@@ -238,9 +238,9 @@ const SERVICES = [
             "Certificate attestation for educational, personal, and commercial documents for use in foreign countries.",
           facts: {
             Service: "Attestation",
-            Types: "Educational, Personal, Commercial",
+            Type: "HRD / MEA / Embassy",
             Coverage: "Gulf & Others",
-            Processing: "5–15 Days",
+            Processing: "7-15 Working Days",
           },
         },
       },
@@ -255,7 +255,7 @@ const SERVICES = [
           facts: {
             Service: "Bus Ticket",
             Coverage: "Tamil Nadu & More",
-            Type: "AC & Non-AC",
+
             Booking: "Online & Offline",
           },
         },
@@ -290,7 +290,7 @@ const SERVICES = [
             "Comprehensive and third-party car insurance for all vehicle types at affordable premiums.",
           facts: {
             Service: "Insurance",
-            Type: "Car Insurance",
+
             Coverage: "Comprehensive / 3rd Party",
             Renewal: "Annual",
           },
@@ -306,7 +306,7 @@ const SERVICES = [
             "Two-wheeler insurance for all bike brands — quick policy issuance and instant renewal.",
           facts: {
             Service: "Insurance",
-            Type: "Bike Insurance",
+
             Coverage: "Comprehensive / 3rd Party",
             Renewal: "Annual",
           },
@@ -320,7 +320,7 @@ const ALL_SERVICE_OPTIONS = [
   "Domestic Flight Tickets",
   "International Flight Tickets",
   "Umrah Services",
-  "Haji Services",
+  "Haj Services",
   "Pan Card",
   "Passport Apply",
   "Visit Visa",
@@ -1375,15 +1375,15 @@ export default function App() {
             className="max-w-3xl"
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-px w-12 bg-orange-400" />
-              <span className="text-orange-400 text-sm font-semibold uppercase tracking-widest">
+              <div className="h-px w-12 bg-sky-400" />
+              <span className="text-sky-400 text-sm font-semibold uppercase tracking-widest">
                 Your Trusted Travel Partner
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white uppercase leading-tight mb-4">
               METRO AIR
               <br />
-              <span style={{ color: "oklch(0.65 0.17 55)" }}>TRAVELS</span>
+              <span style={{ color: "oklch(0.55 0.18 220)" }}>TRAVELS</span>
             </h1>
             <p className="text-blue-100 text-xl md:text-2xl font-medium mb-3">
               Enjoy your trip with our tickets...
@@ -1436,7 +1436,7 @@ export default function App() {
       </section>
 
       {/* Announcement bar */}
-      <div className="bg-orange-500 text-white text-center py-3 px-4">
+      <div className="bg-sky-500 text-white text-center py-3 px-4">
         <p className="font-semibold text-sm tracking-wide">
           ✈ Flight Tickets are now available — Singapore · Malaysia · Gulf ·
           Thailand · Europe · Australia · Domestic Routes
@@ -1454,11 +1454,11 @@ export default function App() {
             className="text-center mb-14"
           >
             <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="h-px w-12 bg-orange-400" />
-              <span className="text-orange-500 text-sm font-semibold uppercase tracking-widest">
+              <div className="h-px w-12 bg-sky-400" />
+              <span className="text-sky-500 text-sm font-semibold uppercase tracking-widest">
                 What We Offer
               </span>
-              <div className="h-px w-12 bg-orange-400" />
+              <div className="h-px w-12 bg-sky-400" />
             </div>
             <h2
               className="text-3xl md:text-4xl font-black uppercase"
@@ -1487,7 +1487,7 @@ export default function App() {
                 >
                   <span
                     className="h-1 w-8 rounded-full inline-block"
-                    style={{ background: "oklch(0.65 0.17 55)" }}
+                    style={{ background: "oklch(0.55 0.18 220)" }}
                   />
                   {group.category}
                 </h3>
@@ -1504,16 +1504,16 @@ export default function App() {
                             details: item.details,
                           })
                         }
-                        className="service-card bg-white border border-gray-100 rounded-xl p-5 flex flex-col items-center gap-3 text-center shadow-xs cursor-pointer hover:border-orange-300 hover:shadow-md transition-all"
+                        className="service-card bg-white border border-gray-100 rounded-xl p-5 flex flex-col items-center gap-3 text-center shadow-xs cursor-pointer hover:border-sky-300 hover:shadow-md transition-all"
                         data-ocid={`services.item.${gi * 10 + ii + 1}`}
                       >
                         <div
                           className="w-12 h-12 rounded-full flex items-center justify-center"
-                          style={{ background: "oklch(0.65 0.17 55 / 0.12)" }}
+                          style={{ background: "oklch(0.55 0.18 220 / 0.12)" }}
                         >
                           <Icon
                             size={22}
-                            style={{ color: "oklch(0.65 0.17 55)" }}
+                            style={{ color: "oklch(0.55 0.18 220)" }}
                           />
                         </div>
                         <span
@@ -1543,11 +1543,11 @@ export default function App() {
             className="text-center mb-14"
           >
             <div className="flex items-center justify-center gap-2 mb-3">
-              <div className="h-px w-12 bg-orange-400" />
-              <span className="text-orange-500 text-sm font-semibold uppercase tracking-widest">
+              <div className="h-px w-12 bg-sky-400" />
+              <span className="text-sky-500 text-sm font-semibold uppercase tracking-widest">
                 Where We Fly
               </span>
-              <div className="h-px w-12 bg-orange-400" />
+              <div className="h-px w-12 bg-sky-400" />
             </div>
             <h2
               className="text-3xl md:text-4xl font-black uppercase"
@@ -1605,7 +1605,7 @@ export default function App() {
                       onClick={() =>
                         setExpandedDest(isExpanded ? null : dest.name)
                       }
-                      className="text-orange-500 hover:text-orange-600 transition-colors flex-shrink-0 ml-2"
+                      className="text-sky-500 hover:text-sky-600 transition-colors flex-shrink-0 ml-2"
                       aria-label={
                         isExpanded ? "Collapse places" : "Expand places"
                       }
@@ -1632,7 +1632,7 @@ export default function App() {
                         className="overflow-hidden bg-white border-t border-gray-100"
                       >
                         <div className="px-4 py-4">
-                          <p className="text-xs font-semibold uppercase tracking-widest text-orange-500 mb-3">
+                          <p className="text-xs font-semibold uppercase tracking-widest text-sky-500 mb-3">
                             Famous Places
                           </p>
                           <div className="grid grid-cols-2 gap-2">
@@ -1647,7 +1647,7 @@ export default function App() {
                                     details: place.details,
                                   })
                                 }
-                                className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2.5 py-2 text-left hover:border-orange-300 hover:bg-orange-50 transition-colors"
+                                className="flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-2.5 py-2 text-left hover:border-sky-300 hover:bg-sky-50 transition-colors"
                               >
                                 <span className="text-base leading-none flex-shrink-0">
                                   {place.emoji}
@@ -1912,7 +1912,7 @@ export default function App() {
                       </p>
                       <a
                         href="tel:+917871819777"
-                        className="text-white font-semibold hover:text-orange-300 transition-colors"
+                        className="text-white font-semibold hover:text-sky-300 transition-colors"
                       >
                         7871819777
                       </a>
@@ -1930,7 +1930,7 @@ export default function App() {
                         href="https://mail.google.com/mail/?view=cm&fs=1&to=metroairtravel@gmail.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white font-semibold hover:text-orange-300 transition-colors break-all"
+                        className="text-white font-semibold hover:text-sky-300 transition-colors break-all"
                       >
                         metroairtravel@gmail.com
                       </a>
@@ -1941,7 +1941,7 @@ export default function App() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                  <MapPin size={18} className="text-orange-300" /> Main Office
+                  <MapPin size={18} className="text-sky-300" /> Main Office
                 </h3>
                 <p className="text-white/80 leading-relaxed">
                   3/25 E, New Bazaar St,
@@ -1956,7 +1956,7 @@ export default function App() {
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                  <MapPin size={18} className="text-orange-300" /> Branch Office
+                  <MapPin size={18} className="text-sky-300" /> Branch Office
                 </h3>
                 <p className="text-white/80 leading-relaxed">
                   PLA Residency,
@@ -2000,7 +2000,7 @@ export default function App() {
             </div>
 
             <div>
-              <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-orange-400">
+              <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-sky-400">
                 Quick Links
               </h4>
               <ul className="space-y-2">
@@ -2019,12 +2019,12 @@ export default function App() {
             </div>
 
             <div>
-              <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-orange-400">
+              <h4 className="font-bold text-sm uppercase tracking-widest mb-4 text-sky-400">
                 Contact Us
               </h4>
               <div className="space-y-3 text-sm text-gray-400">
                 <div className="flex items-center gap-2">
-                  <Phone size={14} className="text-orange-400" />
+                  <Phone size={14} className="text-sky-400" />
                   <a
                     href="tel:+917871819777"
                     className="hover:text-white transition-colors"
@@ -2033,7 +2033,7 @@ export default function App() {
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail size={14} className="text-orange-400" />
+                  <Mail size={14} className="text-sky-400" />
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=metroairtravel@gmail.com"
                     target="_blank"
@@ -2046,7 +2046,7 @@ export default function App() {
                 <div className="flex items-start gap-2">
                   <MapPin
                     size={14}
-                    className="text-orange-400 mt-0.5 flex-shrink-0"
+                    className="text-sky-400 mt-0.5 flex-shrink-0"
                   />
                   <span>3/25 E, New Bazaar St, Natchiarkoil - 612 602</span>
                 </div>
